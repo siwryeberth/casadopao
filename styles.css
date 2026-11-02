@@ -1,0 +1,633 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --laranja: #E87522;
+    --laranja-claro: #F5A45D;
+    --creme: #cfb78c;
+    --branco: #FFFFFF;
+    --marrom: #69391f;
+    --cinza: #585757;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #d4c29f;
+    color: #462512;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background-color: #FFFFFF;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: #4b2919;
+}
+
+.logo span {
+    color: var(--laranja);
+}
+
+.menu {
+    display: flex;
+    gap: 35px;
+}
+
+.menu a {
+    color: var(--marrom);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: var(--laranja);
+}
+
+.menu-mobile {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 28px;
+    color: var(--marrom);
+    cursor: pointer;
+}
+
+
+.inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 90px 8%;
+}
+
+.inicio-texto {
+    flex: 1;
+}
+
+.subtitulo {
+    color: var(--laranja);
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.inicio h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    line-height: 1.2;
+    margin: 20px 0;
+    max-width: 580px;
+}
+
+.inicio-texto p {
+    color: #fcf9f9;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 480px;
+    margin-bottom: 30px;
+}
+
+
+/* =================================
+   BOTÕES
+================================= */
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.botao-principal {
+    display: inline-block;
+    background-color: var(--laranja);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.botao-principal:hover {
+    background-color: var(--marrom);
+    transform: translateY(-3px);
+}
+
+.botao-secundario {
+    display: inline-block;
+    color: var(--laranja);
+    border: 2px solid var(--laranja);
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.botao-secundario:hover {
+    background-color: var(--laranja);
+    color: white;
+}
+
+
+/* =================================
+   LOGO CASA DO PÃO
+================================= */
+
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--laranja);
+    border-radius: 22px;
+    padding: 29px;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.imagem-logo {
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+
+/* =================================
+   DESTAQUES
+================================= */
+
+.destaques {
+    padding: 80px 8%;
+    background-color: white;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo-secao h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+.titulo-secao p {
+    color: var(--cinza);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background-color: var(--laranja);
+    border-radius: 15px;
+    overflow: hidden;
+    padding-bottom: 25px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 20px 20px 10px;
+    font-size: 20px;
+    color: #472512;
+}
+
+.card p {
+    margin: 0 20px;
+    color: var(--branco);
+    line-height: 1.6;
+}
+
+.botao-centro {
+    display: table;
+    margin: 40px auto 0;
+}
+
+
+/* =================================
+   RODAPÉ
+================================= */
+
+.rodape {
+    background-color: var(--marrom);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.logo-rodape {
+    color: white;
+}
+
+.rodape p {
+    margin: 15px 0;
+}
+
+.rodape span {
+    font-size: 13px;
+    color: #E8D5C7;
+}
+
+
+/* =================================
+   RESPONSIVIDADE - CELULAR
+================================= */
+
+@media (max-width: 768px) {
+
+    /* CABEÇALHO */
+
+    .cabecalho {
+        padding: 20px 6%;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+        z-index: 10;
+        box-shadow: 0 5px 10px #00000010;
+    }
+
+    .menu.ativo {
+        display: flex;
+    }
+
+    .menu a {
+        padding: 18px;
+        border-top: 1px solid #eeeeee;
+    }
+
+
+    /* INÍCIO */
+
+    .inicio {
+        flex-direction: column;
+        padding: 55px 6%;
+        gap: 35px;
+    }
+
+    .inicio h1 {
+        font-size: 38px;
+    }
+
+    .inicio-texto p {
+        font-size: 15px;
+    }
+
+
+    /* BOTÕES */
+
+    .botoes {
+        flex-direction: column;
+    }
+
+    .botoes a {
+        text-align: center;
+    }
+
+
+    /* LOGO */
+
+    .logo-container {
+        width: 100%;
+        min-height: 280px;
+        padding: 15px;
+    }
+
+    .imagem-logo {
+        width: 100%;
+        height: 260px;
+        object-fit: contain;
+    }
+
+
+    /* DESTAQUES */
+
+    .destaques {
+        padding: 60px 6%;
+    }
+
+    .titulo-secao h2 {
+        font-size: 29px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 230px;
+    }
+
+}
+
+
+/* =================================
+   PÁGINA DE PRODUTOS
+================================= */
+
+.banner-produtos {
+    text-align: center;
+    padding: 75px 8%;
+    background-color: #d4c29f;
+}
+
+.banner-produtos h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    margin: 15px 0;
+    color: 472512;
+}
+
+.banner-produtos p {
+    color: var(--branco);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* CATÁLOGO */
+
+.catalogo {
+    padding: 75px 8%;
+    background-color: white;
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.produto-card {
+    background-color: var(--laranja);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px #00000008;
+}
+
+.produto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px #00000012;
+}
+
+.produto-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.produto-info {
+    padding: 22px;
+}
+
+.categoria-produto {
+    color: var(--laranja);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.produto-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin: 12px 0;
+    color: var(--marrom);
+}
+
+.produto-info p {
+    color: var(--branco);
+    font-size: 14px;
+    line-height: 1.7;
+    min-height: 48px;
+}
+
+.produto-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.produto-rodape strong {
+    color: var(--marrom);
+    font-size: 13px;
+}
+
+.botao-pedido {
+    background-color: #472512;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.botao-pedido:hover {
+    background-color: #d4c29f;
+}
+
+
+/* CHAMADA PARA CONTATO */
+
+.chamada-contato {
+    background-color: #F5E8D9;
+    text-align: center;
+    padding: 65px 8%;
+}
+
+.chamada-contato h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.chamada-contato p {
+    color: var(--cinza);
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .banner-produtos {
+        padding: 55px 6%;
+    }
+
+    .banner-produtos h1 {
+        font-size: 36px;
+    }
+
+    .catalogo {
+        padding: 55px 6%;
+    }
+
+    .produtos-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .produto-card img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .produto-info h3 {
+        font-size: 22px;
+    }
+
+    .chamada-contato {
+        padding: 55px 6%;
+    }
+
+    .chamada-contato h2 {
+        font-size: 29px;
+    }
+
+}
+
+
+/* =================================
+   PÁGINA DE CONTATO
+================================= */
+
+.contato {
+    padding: 75px 8%;
+    background-color: white;
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.contato-card {
+    background-color: var(--laranja);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.contato-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #00000010;
+}
+
+.contato-icone {
+    width: 60px;
+    height: 60px;
+    background-color: #d4c29f;
+    color: #472512;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.icone {
+    font-size: 28px;
+    font-style: normal;
+}
+
+.contato-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.contato-card p {
+    color: var(--branco);
+    line-height: 1.7;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.contato-dado {
+    color: var(--marrom);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .contato {
+        padding: 55px 6%;
+    }
+
+    .contato-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contato-card {
+        padding: 25px 20px;
+    }
+
+}
+
